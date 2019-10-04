@@ -1,0 +1,11 @@
+* Docker images for medical imaging
+Repository of Docker containers for medical image processing :whale::whale::whale:
+
+
+* Best practices:
+- The =/DATA= folder is used as the standard data folder between the host and Docker container.
+- The containers are run using the =docker= user (do not use the =root= user)
+- Installed code inside the docker is placed at =/home/docker/src/=
+
+* List of docker images:
+- [[pytorch/Dockerfile][Pytorch]]
