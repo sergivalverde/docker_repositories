@@ -4,7 +4,18 @@ Repository of Docker containers for medical image processing :whale::whale::whal
 
 * Best practices:
 - The =/DATA= folder is used as the standard data folder between the host and Docker container.
-- The containers are run using the =docker= user (do not use the =root= user)
+- The containers are run using the =docker= user (do not use the =root= user). We enforce the =UID= to =1000=.
+
+#+begin_SRC bash
+RUN useradd -ms /bin/bash -u 1000 docker
+#+end_SRC
+
+- Read/write permissions between the host and the container can be handled with the =-u= options by matching the host user's =UID= with the container's =UID=:
+
+#+BEGIN_SRC bash
+docker run -u $UID:1000 whatever/docker/image ....
+#+END_SRC
+
 - Installed code inside the docker is placed at =/home/docker/src/=
 
 * List of docker images:

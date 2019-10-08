@@ -1,6 +1,0 @@
-nibabel
-pyfiglet
-scikit-learn
-scipy
-termcolor
-SimpleITK
