@@ -1,0 +1,8 @@
+nibabel
+pyfiglet
+scikit-learn
+scipy
+termcolor
+SimpleITK
+torchvision=0.4.0
+torch=1.2.0
