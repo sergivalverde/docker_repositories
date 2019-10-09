@@ -1,4 +1,4 @@
-* Pytorch docker container for deep learning and medical imaging
+* Pytorch 1.1.0 CUDA 9.2
 Pytorch docker container for medical imaging containing all the necessary packages for medical imaging :whale: :whale: :whale:
 
 ** Building

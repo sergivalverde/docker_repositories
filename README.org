@@ -19,4 +19,5 @@ docker run -u $UID:1000 whatever/docker/image ....
 - Installed code inside the docker is placed at =/home/docker/src/=
 
 * List of docker images:
-- [[pytorch/Dockerfile][Pytorch]]
+- [[pytorch/Dockerfile][Pytorch 1.1.0 Cuda10]]
+- [[pytorch_1_2][Pytorch 1.2.0 Cuda9.2]]
