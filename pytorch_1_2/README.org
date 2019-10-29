@@ -1,16 +1,14 @@
-* Pytorch 1.2.0 + CUDA9.2
+* Pytorch 1.2.0 + CUDA10.1
 
 Pytorch docker container for medical imaging containing all the necessary packages for medical imaging :whale: :whale: :whale:
 
 ** Building
 #+begin_src python
-docker build -f Dockerfile -t sergivalverde/pytorch:1.2.0_cuda9_2_medical
+docker build -f Dockerfile -t sergivalverde/pytorch:1.2.0_cuda10.1_medical .
 #+end_src
 
 ** Base container
-We use the [[www.pytorch.org][Pytorch]] deep learning framework along with the [[www.python.org][Python]] programming language. The base container used is:
-
-- [[https://hub.docker.com/layers/pytorch/pytorch/nightly-devel-cuda9.2-cudnn7/images/sha256-3ad90855a9b5bff845376f0e901e3b9f98424749251aaeefbd65c75cc3d1a2ff][Pytorch nightly build CUDA 9.2]]
+We use the [[www.pytorch.org][Pytorch]] deep learning framework along with the [[www.python.org][Python]] programming language. The base container used is a customized Docker image from the [[https://github.com/sergivalverde/pytorch][Pytorch]] repository updated to Ubuntu 18.04 ([[https://cloud.docker.com/u/sergivalverde/repository/docker/sergivalverde/pytorch-latest][source]]):
 
 *** Already available packages:
 - asn1crypto==0.24.0
@@ -58,7 +56,7 @@ We use the [[www.pytorch.org][Pytorch]] deep learning framework along with the [
 - ruamel-yaml==0.15.46
 - six==1.12.0
 - soupsieve==1.8
-- torch==1.1.0
+- torch==1.2.0
 
 ** Installed packages
 We install all the packages via pip with a =requirements.txt= file. The =Dockerfile= invokes the =pip= command as:
@@ -74,5 +72,8 @@ pip install -r requirements.txt
 - scikit-learn==0.21.3
 - SimpleITK==1.2.2
 - termcolor==1.1.0
-- torch=1.2.0
 - torchvision=0.4.0
+- ants
+- pandas
+- matplotlib
+- statsmodels

@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:nightly-devel-cuda9.2-cudnn7
+FROM sergivalverde/pytorch-latest:ubuntu18.04
 MAINTAINER Sergi Valverde <svalverde@eia.udg.edu>
 
 # --------------------------------------------------
@@ -15,6 +15,7 @@ USER root
 # --------------------------------------------------
 ADD requirements.txt /requirements.txt
 RUN pip install pip --upgrade
+RUN pip install https://github.com/ANTsX/ANTsPy/releases/download/v0.2.0/antspyx-0.2.0-cp37-cp37m-linux_x86_64.whl
 RUN pip install -r /requirements.txt
 
 
