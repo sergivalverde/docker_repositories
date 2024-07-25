@@ -4,7 +4,7 @@ scikit-learn
 scipy
 termcolor
 SimpleITK
-torch==1.2.0
+torch==2.2.0
 torchvision
 pandas
 matplotlib
